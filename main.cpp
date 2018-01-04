@@ -1,7 +1,7 @@
 #include "MapEntityClass.h"
-#include "HouseClass.h"
-#include "SchoolClass.h"
-#include "RoadClass.h"
+#include "HouseClass.h"           // not provided
+#include "SchoolClass.h"          // not provided
+#include "RoadClass.h"            // not provided
 #include "ParkClass.h"
 #include "MapClass.h"
 #include "ColorClass.h"
@@ -17,6 +17,15 @@ using namespace std;
 //Purpose: Demonstrate implementations of functionality relating to forming
 //         a map image from a description of map entities, which initially
 //         include houses, schools, roads, and parks..
+
+/*
+Programmer: Paul A. Beata
+Date: January 2018
+We are behind on this project and I need to finish it this month. The 
+target deadline is Sunday 01-07-18 at 23:00 that night. Many of the 
+classes were provided for this project, so we are mainly focusing on
+adding HouseClass, SchoolClass, and RoadClass it seems.
+*/
 
 int main(int argc, char *argv[])
 {
