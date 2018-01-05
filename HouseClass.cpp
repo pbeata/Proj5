@@ -5,7 +5,10 @@ using namespace std;
 #include "MapClass.h"
 #include "MapExceptionClass.h"
 
+/*
 void HouseClass::drawOnMap (MapClass *mapObj) const
 {
   cout << "hello\n";
 }
+*/
+

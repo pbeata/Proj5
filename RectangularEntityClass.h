@@ -6,21 +6,30 @@
 class RectangularEntityClass : public MapEntityClass
 {
   public:
-    // ctor
+
     RectangularEntityClass(
          const PixelLocationClass &inPixLoc,
          const ColorClass &inColor
-         )
+         ) : MapEntityClass(inPixLoc, inColor)
     {
-      MapEntityClass(inPixLoc, PARK_COLOR);
+      printf("NEW RECTANGLE\n");
     }
-    // one regular function to draw on our map is required:
-    void drawOnMap();
+
+    //The required polymorphic interface for drawing a map entity onto
+    //a map - this implementation draws a rectangular object as a 
+    //on the map being pointed to by the parameter.
+    void drawOnMap(MapClass *mapObj) const
+    {
+      // placeholder until I fill this
+    }
+
     // four pure virtual functions are required:
+    /*
     virtual string toString() const = 0;
     virtual string getType() const = 0;
     virtual int getNumRows() const = 0;
     virtual int getNumCols() const = 0;
+    */
 };
 
 #endif //_RECTANGULARENTITYCLASS_H_

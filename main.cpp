@@ -1,6 +1,6 @@
 #include "MapEntityClass.h"
-/*
 #include "HouseClass.h"                 // not provided
+/*
 #include "SchoolClass.h"                // not provided
 #include "RoadClass.h"                  // not provided
 */
@@ -45,8 +45,9 @@ int main(int argc, char *argv[])
   //the entities, then the earlier-drawn entity's pixels will be 
   //overwritten by the later-drawn entity's pixels..
   
-  /*
   mapEntVec.push_back(new HouseClass(PixelLocationClass(120, 220), 100000));
+
+  /*
   mapEntVec.push_back(new SchoolClass(PixelLocationClass(50, 50), 252));
   mapEntVec.push_back(new RoadClass(PixelLocationClass(5, 5), 75, 4, true));
   mapEntVec.push_back(new RoadClass(PixelLocationClass(160, 20), 212, 3, false));
@@ -63,6 +64,7 @@ int main(int argc, char *argv[])
   mapEntVec.push_back(new HouseClass(PixelLocationClass(5, 135), 300000));
   */
 
+  /*
   //Print out all the entities that are going to be drawn on the map,
   //in the order they will be drawn
   for (mapEntIter = mapEntVec.begin(); 
@@ -110,5 +112,7 @@ int main(int argc, char *argv[])
   outFname = "outMap.ppm";
   cout << "Writing map to output image: " << outFname << endl;
   mapPtr->writeToFile(outFname);
+  */
+
   return 0;
 }

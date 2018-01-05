@@ -24,20 +24,43 @@ class HouseClass : public RectangularEntityClass
     //location they are to be positioned within a map and a value
     //of the house. Then the color of the house is 
     //maintained as a global constant specific to houses.
-    ParkClass(
+    HouseClass(
          const PixelLocationClass &inPixLoc,
          int inHouseValue
          ) : RectangularEntityClass(inPixLoc, HOUSE_COLOR)
     {
       dollarValue = inHouseValue;
-      cout << dollarValue << endl;
     }
 
+    //Simply creates a printable string from a house object, making sure
+    //to only be responsible for those attributes directly associated
+    //with the actual HouseClass, and leaving higher-level attributes to
+    //higher-level classes.
+    /*
+    string toString() const
+    {
+      ostringstream oss;
+      oss.clear();
+      oss.str("");
+      oss << HOUSE_TYPE_STR << " Value: " << dollarValue << " " <<
+             RectangularEntityClass::toString();
+
+      return (oss.str());
+    } 
+    */   
+
+    //The required polymorphic interface for getting the type of a
+    //map entity as a string.
+    string getType() const
+    {
+      return HOUSE_TYPE_STR;
+    }    
+
+    /*
     string toString() const;
-    string getType() const;
     int getNumRows() const;
     int getNumCols() const;
-
+    */
 };
 
 #endif //_HOUSECLASS_H_
