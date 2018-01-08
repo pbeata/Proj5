@@ -21,12 +21,13 @@ class RectangularEntityClass : public MapEntityClass
     void drawOnMap(MapClass *mapObj) const
     {
       // placeholder until I fill this
+      printf("(NEED TO IMPLEMENT drawOnMap STILL)\n");
     }
 
     // four pure virtual functions are required:
-    /*
     virtual string toString() const = 0;
     virtual string getType() const = 0;
+    /*
     virtual int getNumRows() const = 0;
     virtual int getNumCols() const = 0;
     */

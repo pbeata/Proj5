@@ -36,18 +36,16 @@ class HouseClass : public RectangularEntityClass
     //to only be responsible for those attributes directly associated
     //with the actual HouseClass, and leaving higher-level attributes to
     //higher-level classes.
-    /*
     string toString() const
     {
       ostringstream oss;
       oss.clear();
       oss.str("");
       oss << HOUSE_TYPE_STR << " Value: " << dollarValue << " " <<
-             RectangularEntityClass::toString();
+             MapEntityClass::toString();
 
       return (oss.str());
     } 
-    */   
 
     //The required polymorphic interface for getting the type of a
     //map entity as a string.
@@ -57,7 +55,6 @@ class HouseClass : public RectangularEntityClass
     }    
 
     /*
-    string toString() const;
     int getNumRows() const;
     int getNumCols() const;
     */

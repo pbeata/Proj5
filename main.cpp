@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
   mapEntVec.push_back(new HouseClass(PixelLocationClass(5, 135), 300000));
   */
 
-  /*
+  
   //Print out all the entities that are going to be drawn on the map,
   //in the order they will be drawn
   for (mapEntIter = mapEntVec.begin(); 
@@ -78,6 +78,7 @@ int main(int argc, char *argv[])
     cout << mapEntPtr->toString() << endl;
   }
 
+  /*
   //Generate map of specific size
   mapPtr = new MapClass(200, 300, ColorClass(33, 33, 33));
 
