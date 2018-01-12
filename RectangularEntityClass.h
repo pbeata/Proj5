@@ -2,6 +2,7 @@
 #define _RECTANGULARENTITYCLASS_H_
 
 #include "MapEntityClass.h"
+#include "MapExceptionClass.h"
 
 class RectangularEntityClass : public MapEntityClass
 {
@@ -22,15 +23,60 @@ class RectangularEntityClass : public MapEntityClass
     {
       // placeholder until I fill this
       printf("(NEED TO IMPLEMENT drawOnMap STILL)\n");
+
+      bool hadAProblem;
+      int numRows;
+      int numCols;
+      
+      hadAProblem = false;
+      
+      // Determine the size of the rectangle to draw based on the 
+      // implementations of these functions in the derived classes:
+      numRows = getNumRows();
+      numCols = getNumCols();
+
+      // draw the rectangle on the map
+      for (int iPixel = 0; iPixel < numRows; iPixel++)
+      {
+        for (int jPixel = 0; jPixel < numCols; jPixel++)
+        {
+          //catch exceptions inside the loops so we can continue
+          //trying to set additional pixels as appropriate...
+          try
+          {
+            mapObj->setMapPixel(location + PixelLocationClass(iPixel, jPixel), color);
+          }
+          catch (MapExceptionClass mapExcep)
+          {
+            cout << "ParkClass::drawOnMap caught exception: " <<
+                    mapExcep.toString() << endl;
+            hadAProblem = true;
+          }
+        }
+      }
+
+      //Our protocol is that if any problems were detected, this function
+      //throws an exception after working through all the possible pixels,
+      //so if there was a problem, throw an exception from here..
+      if (hadAProblem)
+      {
+        ostringstream excOSS;
+
+        excOSS.clear();
+        excOSS.str("");
+        excOSS << "Attempted to draw out of bounds";
+
+        throw MapExceptionClass(excOSS.str());
+      }
+
     }
 
-    // four pure virtual functions are required:
+    // Four pure virtual functions are required to be defined in 
+    // any derived classes: 
     virtual string toString() const = 0;
     virtual string getType() const = 0;
-    /*
     virtual int getNumRows() const = 0;
     virtual int getNumCols() const = 0;
-    */
 };
 
 #endif //_RECTANGULARENTITYCLASS_H_

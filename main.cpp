@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
     cout << mapEntPtr->toString() << endl;
   }
 
-  /*
+
   //Generate map of specific size
   mapPtr = new MapClass(200, 300, ColorClass(33, 33, 33));
 
@@ -113,7 +113,6 @@ int main(int argc, char *argv[])
   outFname = "outMap.ppm";
   cout << "Writing map to output image: " << outFname << endl;
   mapPtr->writeToFile(outFname);
-  */
 
   return 0;
 }

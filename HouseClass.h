@@ -54,10 +54,16 @@ class HouseClass : public RectangularEntityClass
       return HOUSE_TYPE_STR;
     }    
 
-    /*
+    //The HouseClass is printed as a square; thus the output of
+    //the getNumRows and getNumCols functions will be equal
+    //(i.e., a square is printed as n-by-n pixels, where n is the
+    //output of either function here). 
+    //  Size of house is proportional to value (1 pixel per 15000):
+    //    value:     0-14999  -->  size 1x1 pixels
+    //    value: 15000-29999  -->  size 2x2 pixels
+    //    value: 30000-44999  -->  size 3x3 pixels (etc.)
     int getNumRows() const;
     int getNumCols() const;
-    */
 };
 
 #endif //_HOUSECLASS_H_
