@@ -1,16 +1,13 @@
 #include "MapEntityClass.h"
-#include "HouseClass.h"                 // not provided
-#include "SchoolClass.h"                // not provided
-/*
-#include "RoadClass.h"                  // not provided
-*/
+#include "HouseClass.h"
+#include "SchoolClass.h"
+#include "RoadClass.h"
+
 #include "ParkClass.h"
 #include "MapClass.h"
 #include "ColorClass.h"
 #include "MapExceptionClass.h"
-/*
-#include "RectangularEntityClass.h"     // not provided
-*/
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -46,26 +43,18 @@ int main(int argc, char *argv[])
   //Generate a bunch of entities in a specific order now..  The entities
   //will be drawn in this order, so if there ends up being overlap between
   //the entities, then the earlier-drawn entity's pixels will be 
-  //overwritten by the later-drawn entity's pixels..
-  
+  //overwritten by the later-drawn entity's pixels.
   mapEntVec.push_back(new HouseClass(PixelLocationClass(120, 220), 100000));
   mapEntVec.push_back(new SchoolClass(PixelLocationClass(50, 50), 252));
-
-  /*
   mapEntVec.push_back(new RoadClass(PixelLocationClass(5, 5), 75, 4, true));
   mapEntVec.push_back(new RoadClass(PixelLocationClass(160, 20), 212, 3, false));
   mapEntVec.push_back(new SchoolClass(PixelLocationClass(151, 115), 516));
-  */
-
   mapEntVec.push_back(new ParkClass(PixelLocationClass(90, 280), 350));
-
-  /*
   mapEntVec.push_back(new RoadClass(PixelLocationClass(100, 250), 53, 2, false));
   mapEntVec.push_back(new ParkClass(PixelLocationClass(18, 281), 515));
   mapEntVec.push_back(new SchoolClass(PixelLocationClass(100, 150), 1266));
   mapEntVec.push_back(new RoadClass(PixelLocationClass(1, 142), 190, 4, true));
   mapEntVec.push_back(new HouseClass(PixelLocationClass(5, 135), 300000));
-  */
 
   
   //Print out all the entities that are going to be drawn on the map,

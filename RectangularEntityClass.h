@@ -13,7 +13,7 @@ class RectangularEntityClass : public MapEntityClass
          const ColorClass &inColor
          ) : MapEntityClass(inPixLoc, inColor)
     {
-      printf("NEW RECTANGLE\n");
+      // new rectangle instance created
     }
 
     //The required polymorphic interface for drawing a map entity onto
@@ -45,7 +45,7 @@ class RectangularEntityClass : public MapEntityClass
           }
           catch (MapExceptionClass mapExcep)
           {
-            cout << "ParkClass::drawOnMap caught exception: " <<
+            cout << "RectangularEntityClass::drawOnMap caught exception: " <<
                     mapExcep.toString() << endl;
             hadAProblem = true;
           }

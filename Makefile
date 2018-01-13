@@ -1,5 +1,5 @@
-MapProgram.exe: SchoolClass.o HouseClass.o ParkClass.o ColorClass.o PixelLocationClass.o MapClass.o main.o
-	g++ -g -Wall SchoolClass.o HouseClass.o ParkClass.o ColorClass.o PixelLocationClass.o MapClass.o main.o -o MapProgram.exe
+MapProgram.exe: RoadClass.o SchoolClass.o HouseClass.o ParkClass.o ColorClass.o PixelLocationClass.o MapClass.o main.o
+	g++ -g -Wall RoadClass.o SchoolClass.o HouseClass.o ParkClass.o ColorClass.o PixelLocationClass.o MapClass.o main.o -o MapProgram.exe
 
 main.o: main.cpp
 	g++ -c main.cpp -o main.o
@@ -21,6 +21,9 @@ HouseClass.o: HouseClass.cpp HouseClass.h
 
 SchoolClass.o: SchoolClass.cpp SchoolClass.h
 	g++ -c SchoolClass.cpp -o SchoolClass.o
+
+RoadClass.o: RoadClass.cpp RoadClass.h
+	g++ -c RoadClass.cpp -o RoadClass.o
 
 clean:
 	rm -rf *.o *~ *.exe

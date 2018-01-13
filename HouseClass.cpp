@@ -1,9 +1,4 @@
-#include <iostream>
-using namespace std;
-
 #include "HouseClass.h"
-#include "MapClass.h"
-#include "MapExceptionClass.h"
 
 int HouseClass::getNumRows() const
 {
