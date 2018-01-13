@@ -21,9 +21,6 @@ class RectangularEntityClass : public MapEntityClass
     //on the map being pointed to by the parameter.
     void drawOnMap(MapClass *mapObj) const
     {
-      // placeholder until I fill this
-      printf("(NEED TO IMPLEMENT drawOnMap STILL)\n");
-
       bool hadAProblem;
       int numRows;
       int numCols;

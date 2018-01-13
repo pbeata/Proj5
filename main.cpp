@@ -1,7 +1,7 @@
 #include "MapEntityClass.h"
 #include "HouseClass.h"                 // not provided
-/*
 #include "SchoolClass.h"                // not provided
+/*
 #include "RoadClass.h"                  // not provided
 */
 #include "ParkClass.h"
@@ -29,6 +29,9 @@ We are behind on this project and I need to finish it this month. The
 target deadline is Sunday 01-07-18 at 23:00 that night. Many of the 
 classes were provided for this project, so we are mainly focusing on
 adding HouseClass, SchoolClass, and RoadClass it seems.
+
+Update: 01-13-18
+I missed the deadline! I am trying to finish this by Sunday 01-14-18 now.
 */
 
 int main(int argc, char *argv[])
@@ -46,9 +49,9 @@ int main(int argc, char *argv[])
   //overwritten by the later-drawn entity's pixels..
   
   mapEntVec.push_back(new HouseClass(PixelLocationClass(120, 220), 100000));
+  mapEntVec.push_back(new SchoolClass(PixelLocationClass(50, 50), 252));
 
   /*
-  mapEntVec.push_back(new SchoolClass(PixelLocationClass(50, 50), 252));
   mapEntVec.push_back(new RoadClass(PixelLocationClass(5, 5), 75, 4, true));
   mapEntVec.push_back(new RoadClass(PixelLocationClass(160, 20), 212, 3, false));
   mapEntVec.push_back(new SchoolClass(PixelLocationClass(151, 115), 516));

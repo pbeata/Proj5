@@ -1,10 +1,12 @@
 #ifndef _ROADCLASS_H_
 #define _ROADCLASS_H_
 
-class RoadClass
+class RoadClass : public RectangularEntityClass
 {
   private:
-    int test;
+    int length;
+    int numLanes;
+    bool isVertical;
 
   public:
     void setTest();
